@@ -9,6 +9,7 @@ Task
 1 - Handle the following conversion specifiers
 
 2 - Create a man page for your function
+
 Authors
 * Afeh
 * HarryCelt 
