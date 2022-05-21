@@ -12,7 +12,7 @@
 
 int _printf(const char *format, ...)
 {
-	if (format != NULL)
+	if (format != NULL )
 	{
 		int count = 0, i;
 		int (*m)(va_list);
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 			return (-1);
 		while (format != NULL && format[i] != '\0')
 		{
-			if (format[i] == %')
+			if (format[i] == '%')
 			{
 				if (format[i + 1] == '%')
 				{
@@ -33,10 +33,11 @@ int _printf(const char *format, ...)
 				}
 				else
 				{
-					m = get_func(format[i + 1]);
+					m = m = get_func(format[i + 1]);
 					if (m)
 						count += m(args);
-					else count = _putchar(format[i]) + _putchar(format[i + 1]);
+					else
+						count = _putchar(format[i]) + _putchar(format[i + 1]);
 					i += 2;
 				}
 			}
@@ -51,3 +52,4 @@ int _printf(const char *format, ...)
 	}
 	return (-1);
 }
+

@@ -4,6 +4,7 @@
 #include <stdarg.h>
 
 /**
+ * struct specifier - struct specifier
  * @valid: the valid character
  * @f: the functions associated
  */
